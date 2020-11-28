@@ -14,7 +14,7 @@
 
 		<link rel="stylesheet" href="/main.css" />
 		<link rel="stylesheet" href="/normalize.css" />
-		
+
 		<!-- Sapper generates a <style> tag containing critical CSS
   		for the current page. CSS for the rest of the app is
   		lazily loaded when it precaches secondary pages -->
@@ -25,10 +25,8 @@
 		%sapper.head%
 	</head>
 
-	<body>
-		<div id="sapper">
-			%sapper.html%
-		</div>
+	<body class="bg-grey-lighter h-screen font-sans">
+		%sapper.html%
 
 		%sapper.scripts%
 	</body>

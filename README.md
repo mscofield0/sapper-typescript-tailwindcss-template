@@ -1,51 +1,23 @@
-<h1 align="center">🌐 Sapper with TypeScript and GraphQL project base</h1>
+<h1 align="center">🌐 Sapper with TypeScript, GraphQL and Tailwindcss project base</h1>
 
 ## ❓ What is this?
 
-This is an extension to the [official Sapper Rollup template](https://github.com/sveltejs/sapper-template-rollup) with TypeScript preprocessing and a GraphQL server through TypeGraphQL (Apollo Server).
+This is a combination of the [Sapper Typescript-GraphQL template](https://github.com/babichjacob/sapper-typescript-graphql-template) and [Sapper Tailwindcss template](https://github.com/sarioglu/sapper-tailwindcss-template).
 
-If you're looking for something with much, much more bundled in, check out [my opinionated project base](https://github.com/babichjacob/sapper-firebase-typescript-graphql-tailwindcss-actions-template).
+If you're looking for something with much, much more bundled in, check out [Jacob Babich's opinionated project base](https://github.com/babichjacob/sapper-firebase-typescript-graphql-tailwindcss-actions-template).
 
 - [Sapper for Svelte](https://sapper.svelte.dev/)
   - [Official VS Code Plugin](https://marketplace.visualstudio.com/items?itemName=svelte.svelte-vscode)
+- [PostCSS](https://postcss.org/)
+  - [Tailwind CSS](https://tailwindcss.com/)
+    - [Official VS Code Extension](https://marketplace.visualstudio.com/items?itemName=bradlc.vscode-tailwindcss)
+      - [postcss-import](https://github.com/postcss/postcss-import)
+      - [PurgeCSS](https://www.purgecss.com/)
+      - [CSSNano](https://cssnano.co/)
+      Inside Svelte components, thanks to [`svelte-preprocess`](https://github.com/kaisermann/svelte-preprocess)
 - [TypeScript](https://www.typescriptlang.org/)
   - [TypeGraphQL](https://typegraphql.com/)
   - Inside Svelte components, thanks to [`svelte-preprocess`](https://github.com/kaisermann/svelte-preprocess)
-- [Progressive Web App (PWA)](https://developer.mozilla.org/en-US/docs/Web/Progressive_web_apps) best practices set up
-  - [`manifest.json`](https://developer.mozilla.org/en-US/docs/Web/Manifest)'s most important fields filled out
-  - High [Lighthouse](https://developers.google.com/web/tools/lighthouse) audit score
-- [ESLint](https://eslint.org/)
-  - [VS Code Plugin](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint)
-  - `eslint:fix` package script
-
-## 🧭 Project Status
-Sapper is going to change.
-
-Until `create-svelte` and `@sveltejs/kit` are ready, **this project base will continue to be maintained**. 
-
-But, once we move on, I won't be creating project bases (templates / boilerplates) anymore. Instead, you'll apply presets onto the default template like this:
-
-```sh
-npm init svelte@next  # Use the official template from create-svelte
-npx use-preset babichjacob/svelte-add-typescript  # Apply the changes to set up TypeScript for create-svelte
-npx use-preset babichjacob/svelte-add-typegraphql  # Apply the changes to set up TypeGraphQL for create-svelte as long as TypeScript is already set up
-# Remember, the above are hypothetical commands and the real ones might look and work different
-```
-
-This should have the same result as cloning a project base, but there are more reasons to reach for this solution:
-1. Reduced "heartbeat commits" (like upgrading packages to their latest versions) to prove the project still works
-2. Allows picking parts instead of taking *all or nothing* from a project base
-3. Focus on higher quality "atomic" presets. For example, there might be a `svelte-add-pwa` preset that adds a service worker and `manifest.json` with example icon files like we have now
-4. `create-svelte` is young and probably going to change often, so only affected presets will need to be updated
-5. Reduced duplication: I won't need to copy over changes from one project base to another to keep them synchronized
-
-Than there are to continue making project bases:
-1. (I suspect) preset logic is complex
-2. I suspect presets are harder to test and can have harder to predict errors
-
-So this is what's going to happen. 
-
-**Read on to use this project base today:**
 
 ## 📋 Copy
 
@@ -54,17 +26,17 @@ Choose either to clone or fork depending on your preference.
 ### 🐑 Clone
 
 ```sh
-git clone https://github.com/babichjacob/sapper-typescript-graphql-template
+git clone https://github.com/mscofield0/sapper-typescript-graphql-tailwindcss-template
 ```
 
 ### 🍴 Fork
 
-Click the `Use this template` button on [this project's GitHub page](https://github.com/babichjacob/sapper-typescript-graphql-template).
+Click the `Use this template` button on [this project's GitHub page](https://github.com/mscofield0/sapper-typescript-graphql-tailwindcss-template).
 
 ### ⬇️ Install Dependencies
 
 ```sh
-cd sapper-typescript-graphql-template
+cd sapper-typescript-graphql-tailwindcss-template
 npm install  # pnpm also works
 ```
 
@@ -117,18 +89,23 @@ This project base comes with [source maps](https://blog.teamtreehouse.com/introd
 
 ## 😵 Help! I have a question
 
-[Create an issue](https://github.com/babichjacob/sapper-typescript-graphql-template/issues/new) and I'll try to help.
+[Create an issue](https://github.com/mscofield0/sapper-typescript-graphql-tailwindcss-template/issues/new) and I'll try to help.
 
 ## 😡 Fix! There is something that needs improvement
 
-[Create an issue](https://github.com/babichjacob/sapper-typescript-graphql-template/issues/new) or [pull request](https://github.com/babichjacob/sapper-typescript-graphql-template/pulls) and I'll try to fix.
+[Create an issue](https://github.com/mscofield0/sapper-typescript-graphql-tailwindcss-template/issues/new) or [pull request](https://github.com/mscofield0/sapper-typescript-graphql-tailwindcss-template/pulls) and I'll try to fix.
 
 I'm sorry, because of my skill level and the fragility of (the combination of) some of these tools, there are likely to be problems in this project. Thank you for bringing them to my attention or fixing them for me.
+
+## Note on Typescript usage inside Svelte <script> tags
+
+To use Typescript inside Svelte <script> tags, write it like so:
+```sveltehtml
+<script lang="ts">
+    let example: string
+</script>
+```
 
 ## 📄 License
 
 MIT
-
----
-
-_This README was generated with ❤️ by [readme-md-generator](https://github.com/kefranabg/readme-md-generator)_

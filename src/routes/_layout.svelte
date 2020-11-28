@@ -1,8 +1,10 @@
 <script context="module">
+	import Tailwindcss from "../components/Tailwindcss.svelte";
+
 	export const preload = () => {};
 </script>
 
-<script>
+<script lang="ts">
 	import { stores } from "@sapper/app";
 
 	// You may not want to use `segment`, but it is passed for the time being and will
@@ -17,6 +19,8 @@
 	let path: string;
 	$: path = $page.path.slice(1);
 </script>
+
+<Tailwindcss />
 
 <svelte:head>
 	<title>
