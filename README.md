@@ -1,8 +1,8 @@
-<h1 align="center">🌐 Sapper with TypeScript, GraphQL and Tailwindcss project base</h1>
+<h1 align="center">🌐 Sapper with TypeScript and Tailwindcss project base</h1>
 
 ## ❓ What is this?
 
-This is a combination of the [Sapper Typescript-GraphQL template](https://github.com/babichjacob/sapper-typescript-graphql-template) and [Sapper Tailwindcss template](https://github.com/sarioglu/sapper-tailwindcss-template).
+This is a stripped down version of the [Sapper Typescript-GraphQL-Tailwindcss template](https://github.com/mscofield0/sapper-typescript-graphql-tailwindcss-template).
 
 If you're looking for something with much, much more bundled in, check out [Jacob Babich's opinionated project base](https://github.com/babichjacob/sapper-firebase-typescript-graphql-tailwindcss-actions-template).
 
@@ -16,7 +16,6 @@ If you're looking for something with much, much more bundled in, check out [Jaco
       - [CSSNano](https://cssnano.co/)
       Inside Svelte components, thanks to [`svelte-preprocess`](https://github.com/kaisermann/svelte-preprocess)
 - [TypeScript](https://www.typescriptlang.org/)
-  - [TypeGraphQL](https://typegraphql.com/)
   - Inside Svelte components, thanks to [`svelte-preprocess`](https://github.com/kaisermann/svelte-preprocess)
 
 ## 📋 Copy
@@ -26,17 +25,17 @@ Choose either to clone or fork depending on your preference.
 ### 🐑 Clone
 
 ```sh
-git clone https://github.com/mscofield0/sapper-typescript-graphql-tailwindcss-template
+git clone https://github.com/mscofield0/sapper-typescript-tailwindcss-template
 ```
 
 ### 🍴 Fork
 
-Click the `Use this template` button on [this project's GitHub page](https://github.com/mscofield0/sapper-typescript-graphql-tailwindcss-template).
+Click the `Use this template` button on [this project's GitHub page](https://github.com/mscofield0/sapper-typescript-tailwindcss-template).
 
 ### ⬇️ Install Dependencies
 
 ```sh
-cd sapper-typescript-graphql-tailwindcss-template
+cd sapper-typescript-tailwindcss-template
 npm install  # pnpm also works
 ```
 
@@ -53,8 +52,6 @@ npm run prod
 ```
 
 ### 📦 Exporting a Static Site
-Your GraphQL server will not be exported with the rest of the site.
-
 ```sh
 npm run export
 ```
@@ -69,31 +66,13 @@ The [Apple touch icon](https://developer.apple.com/library/archive/documentation
 ### 🗺 Source maps
 This project base comes with [source maps](https://blog.teamtreehouse.com/introduction-source-maps) enabled during development and disabled during production for the best compromise between performance and developer experience. You can change this behavior through the `sourcemap` variable in `rollup.config.js`.
 
-### 🕸 Optionally removing the GraphQL server
-1. Remove these lines in `src/server.ts`:
-    1. ```ts
-       import { createApolloServer } from "./graphql";
-       ```
-    2. ```ts
-       const apolloServer = await createApolloServer();
-       ```
-    3. ```ts
-       apolloServer.applyMiddleware({ app, path: graphqlPath });
-       ```
-
-2. Remove the now-useless `graphqlPath` parameter to `createSapperAndApolloServer` in `src/server.ts`. This is also a good opportunity to rename the function since there is no longer an Apollo Server
-
-3. Delete the `src/graphql` folder
-
-4. Uninstall the `apollo-server-express`, `bufferutil`, `class-validator`, `graphql`, `reflect-metadata`, `type-graphql`, and `utf-8-validate` packages
-
 ## 😵 Help! I have a question
 
 [Create an issue](https://github.com/mscofield0/sapper-typescript-graphql-tailwindcss-template/issues/new) and I'll try to help.
 
 ## 😡 Fix! There is something that needs improvement
 
-[Create an issue](https://github.com/mscofield0/sapper-typescript-graphql-tailwindcss-template/issues/new) or [pull request](https://github.com/mscofield0/sapper-typescript-graphql-tailwindcss-template/pulls) and I'll try to fix.
+[Create an issue](https://github.com/mscofield0/sapper-typescript-tailwindcss-template/issues/new) or [pull request](https://github.com/mscofield0/sapper-typescript-tailwindcss-template/pulls) and I'll try to fix.
 
 I'm sorry, because of my skill level and the fragility of (the combination of) some of these tools, there are likely to be problems in this project. Thank you for bringing them to my attention or fixing them for me.
 
