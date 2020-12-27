@@ -1,7 +1,7 @@
 {
-	"short_name": "Sapper + TypeScript + GraphQL + TailwindCSS",
-	"name": "Sapper with TypeScript, GraphQL and TailwindCSS project base",
-	"description": "A template that includes Svelte with Sapper, TypeScript preprocessing, TailwindCSS, and a GraphQL server through TypeGraphQL",
+	"short_name": "Sapper + TypeScript + TailwindCSS",
+	"name": "Sapper with TypeScript and TailwindCSS project base",
+	"description": "A template that includes Svelte with Sapper, TypeScript preprocessing and TailwindCSS.",
 	"categories": ["personalization", "productivity"],
 	"lang": "en-US",
 	"dir": "ltr",

@@ -6,6 +6,7 @@
 
 		%sapper.base%
 
+		<link rel="stylesheet" href="global.css">
 		<link rel="manifest" href="manifest.json" />
 		<meta name="theme-color" content="#3F83F8">
 
@@ -26,7 +27,9 @@
 	</head>
 
 	<body class="bg-grey-lighter h-screen font-sans">
-		%sapper.html%
+		<div id="sapper">
+			%sapper.html%
+		</div>
 
 		%sapper.scripts%
 	</body>

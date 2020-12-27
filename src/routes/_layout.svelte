@@ -1,6 +1,4 @@
 <script context="module">
-	import Tailwindcss from "../components/Tailwindcss.svelte";
-
 	export const preload = () => {};
 </script>
 
@@ -20,11 +18,9 @@
 	$: path = $page.path.slice(1);
 </script>
 
-<Tailwindcss />
-
 <svelte:head>
 	<title>
-		{path ? path.charAt(0).toUpperCase() + path.slice(1) : "Index"}
+		{path ? path.charAt(0).toUpperCase() + path.slice(1).split('-').join(' ') : "Index"}
 	</title>
 </svelte:head>
 
