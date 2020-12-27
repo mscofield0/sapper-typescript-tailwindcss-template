@@ -79,7 +79,7 @@ I'm sorry, because of my skill level and the fragility of (the combination of) s
 ## Note on Typescript usage inside Svelte <script> tags
 
 To use Typescript inside Svelte <script> tags, write it like so:
-```sveltehtml
+```html
 <script lang="ts">
     let example: string
 </script>
